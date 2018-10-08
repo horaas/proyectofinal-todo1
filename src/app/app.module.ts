@@ -18,6 +18,7 @@ import { BackendService } from './backend.service';
 /*Componentes*/
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthenticationService } from './authentication/authentication.service';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientInMemoryWebApiModule.forRoot(BackendService),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
